@@ -11,6 +11,7 @@ type Lexer struct {
 	ch           byte // current char under examination
 }
 
+// New will new up this lexer WTSE-1
 func New(input string) *Lexer {
 	l := &Lexer{input: input}
 	l.readChar()
@@ -24,9 +25,10 @@ func (l *Lexer) readChar() {
 		l.ch = l.input[l.readPosition]
 	}
 	l.position = l.readPosition
-	l.readPosition += 1
+	l.readPosition++
 }
 
+// NextToken will get the next token WTSE-1
 func (l *Lexer) NextToken() token.Token {
 	var tok token.Token
 
