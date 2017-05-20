@@ -12,3 +12,5 @@ func (i *Identifier) expressionNode() {}
 
 // TokenLiteral WTSE-1
 func (i *Identifier) TokenLiteral() string { return i.Token.Literal }
+
+func (i *Identifier) String() string { return i.Value }
