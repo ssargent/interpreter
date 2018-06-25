@@ -6,6 +6,7 @@ import (
 	"github.com/ssargent/interpreter/monkey/token"
 )
 
+// PrefixExpression WTSE-1
 type PrefixExpression struct {
 	Token    token.Token // the prefix token, eg !
 	Operator string
